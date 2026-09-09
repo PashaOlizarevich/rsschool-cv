@@ -1,11 +1,282 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
+    <meta
+      name="description"
+      content="Резюме Павла Олизаревича — Junior Frontend / Full-stack JavaScript Developer"
+    >
+    <title>Павел Олизаревич — CV</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="cv-sheet">
+    <header>
+      <img
+        class="profile-photo"
+        src="assets/images/profile-photo.png"
+        alt="Фотография Павла Олизаревича"
+        width="1024"
+        height="1365"
+      >
+      <h1>Павел Олизаревич</h1>
+      <p>Junior Frontend / Full-stack JavaScript Developer</p>
+
+      <nav aria-label="Навигация по резюме">
+        <ul>
+          <li><a href="#contacts">Контакты</a></li>
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#skills">Навыки</a></li>
+          <li><a href="#code">Код</a></li>
+          <li><a href="#projects">Проекты</a></li>
+          <li><a href="#education">Образование</a></li>
+          <li><a href="#english">Английский язык</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="contacts">
+        <h2>Контактная информация</h2>
+        <address>
+          <ul>
+            <li>
+              GitHub:
+              <a href="https://github.com/PashaOlizarevich">PashaOlizarevich</a>
+            </li>
+            <li>LinkedIn: будет добавлен позже</li>
+<!--             <li>Email: будет добавлен позже</li>
+            <li>Discord: будет добавлен позже</li> -->
+            <li>Локация: Беларусь</li>
+            <li>Формат работы: удалённо</li>
+          </ul>
+        </address>
+      </section>
+
+      <section id="about">
+        <h2>Обо мне</h2>
+        <p>Я начинающий Frontend / AI-Full-stack JavaScript разработчик.</p>
+        <p>
+          Изучаю веб-разработку около года и стараюсь закреплять полученные знания
+          на практике через учебные и собственные проекты.
+        </p>
+        <p>
+          Основное направление моего развития — JavaScript и современная
+          веб-разработка. Работаю с React, знаком с Next.js, Git, GitHub, REST API
+          и современными инструментами разработки.
+        </p>
+        <p>
+          Мне интересно не просто получать готовый результат, а понимать, как
+          работает приложение: как взаимодействуют frontend, backend, API и базы
+          данных, как организована структура проекта и как правильно работать с
+          системой контроля версий.
+        </p>
+        <p>
+          Активно использую AI-инструменты для обучения, анализа кода, поиска
+          ошибок и ускорения разработки, при этом стараюсь разбираться в
+          предлагаемых решениях и понимать используемый код.
+        </p>
+        <p>
+          Сейчас основное внимание уделяю укреплению фундаментальных знаний
+          JavaScript, изучению TypeScript, React, Next.js, backend-разработки и
+          баз данных.
+        </p>
+        <p>
+          Моя цель — получить первый коммерческий опыт и развиваться в направлении
+          Frontend / Full-stack JavaScript Development.
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Навыки</h2>
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Next.js</li>
+          <li>DOM</li>
+          <li>Fetch API</li>
+          <li>REST API</li>
+          <li>Адаптивная вёрстка</li>
+          <li>Работа с компонентами</li>
+        </ul>
+        <h3>Инструменты</h3>
+        <ul>
+          <li>GitHub</li>
+          <li>Vercel</li>
+        </ul>
+        <h3>Сейчас изучаю</h3>
+        <ul>
+          <li>TypeScript</li>
+          <li>Углублённый JavaScript</li>
+          <li>React</li>
+          <li>Next.js</li>
+          <li>Node.js</li>
+          <li>Backend-разработку</li>
+          <li>Базы данных</li>
+          <li>HTTP</li>
+          <li>Web Security</li>
+          <li>Тестирование приложений</li>
+        </ul>
+        <h3>Дополнительные навыки</h3>
+        <ul>
+          <li>Работа с AI-инструментами</li>
+          <li>Работа с AI-агентами</li>
+          <li>Prompt Engineering</li>
+          <li>Декомпозиция задач</li>
+          <li>Отладка приложений</li>
+          <li>Анализ ошибок</li>
+          <li>Работа с технической документацией</li>
+        </ul>
+      </section>
+
+      <section id="code">
+        <h2>Пример кода</h2>
+        <p>Функция для поиска максимального числа в массиве:</p>
+        <pre><code>function findMax(numbers) {
+  let max = numbers[0];
+
+  for (let i = 1; i &lt; numbers.length; i++) {
+    if (numbers[i] &gt; max) {
+      max = numbers[i];
+    }
+  }
+
+  return max;
+}
+
+console.log(findMax([3, 7, 2, 10, 5])); // 10</code></pre>
+      </section>
+
+      <section id="projects">
+        <h2>Проекты / опыт</h2>
+        <article>
+          <h3>Virtual Space</h3>
+          <p>
+            Веб-приложение, созданное с использованием современных
+            JavaScript-технологий и AI-инструментов.
+          </p>
+          <h4>Используемые технологии</h4>
+          <ul>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Vercel</li>
+            <li>AI-инструменты</li>
+          </ul>
+          <p>
+            Deploy:
+            <a
+              href="https://virtual-space-tau.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              virtual-space-tau.vercel.app
+            </a>
+          </p>
+          <h4>Практический опыт в проекте</h4>
+          <ul>
+            <li>Создание React-приложения</li>
+            <li>Работа с компонентами</li>
+            <li>Использование Next.js</li>
+            <li>Организация структуры проекта</li>
+            <li>Работа с Git и GitHub</li>
+            <li>Деплой приложения через Vercel</li>
+            <li>Интеграция AI-функциональности</li>
+            <li>Поиск и исправление ошибок</li>
+            <li>Работа с документацией</li>
+            <li>Улучшение существующего кода</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="education">
+        <h2>Образование и самообразование</h2>
+        <p>Дополнительно изучаю программирование самостоятельно.</p>
+        <p>В обучении использую:</p>
+        <ul>
+          <li>Официальную документацию</li>
+          <li>Практические задания</li>
+          <li>Собственные проекты</li>
+          <li>GitHub</li>
+          <li>Онлайн-курсы</li>
+          <li>Обучающие платформы</li>
+          <li>AI-инструменты</li>
+          <li>Практику написания и анализа кода</li>
+        </ul>
+        <p>
+          Стараюсь уделять особое внимание не только изучению синтаксиса, но и
+          пониманию принципов работы технологий.
+        </p>
+      </section>
+
+      <section id="english">
+        <h2>Английский язык</h2>
+        <p>Уровень: начальный / Pre-Intermediate.</p>
+        <p>Русский язык: родной.</p>
+      </section>
+
+      <section id="strengths">
+        <h2>Сильные стороны</h2>
+        <ul>
+          <li>Высокая мотивация к развитию в программировании</li>
+          <li>Желание разбираться в принципах работы технологий</li>
+          <li>Способность самостоятельно искать информацию</li>
+          <li>Готовность изучать новые технологии</li>
+          <li>Умение разбивать большие задачи на небольшие этапы</li>
+          <li>Использование AI как инструмента обучения и разработки</li>
+          <li>Внимание к ошибкам и их анализу</li>
+          <li>Интерес как к Frontend, так и к Full-stack разработке</li>
+        </ul>
+      </section>
+
+      <section id="goals">
+        <h2>Цели</h2>
+        <ol>
+          <li>Укрепить фундаментальные знания JavaScript</li>
+          <li>Получить первый коммерческий опыт в разработке</li>
+          <li>Изучить TypeScript</li>
+          <li>Углубить знания React</li>
+          <li>Лучше освоить Next.js</li>
+          <li>Изучить Node.js</li>
+          <li>Освоить backend-разработку</li>
+          <li>Изучить основы работы с базами данных</li>
+          <li>Освоить тестирование приложений</li>
+          <li>Создать несколько сильных проектов для портфолио</li>
+          <li>Подготовиться к техническим собеседованиям</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © 2026 Павел Олизаревич ·
+        <a
+          href="https://github.com/PashaOlizarevich"
+          target="_blank"
+          rel="noopener noreferrer"
+        >GitHub</a>
+      </p>
+      <a
+        href="https://rs.school/courses/javascript"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Перейти на сайт RS School"
+      >
+        <img
+          class="rs-school-logo"
+          src="assets/images/rs-school-logo.svg"
+          alt="Логотип RS School"
+          width="64"
+          height="64"
+        >
+      </a>
+    </footer>
+    </div>
   </body>
 </html>
