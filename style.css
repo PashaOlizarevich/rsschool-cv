@@ -1,11 +1,253 @@
-* {
-  box-sizing: border-box;
+:root {
+  --page: #e9e9e9;
+  --paper: #fff;
+  --ink: #202020;
+  --muted: #616161;
+  --sidebar: #222;
+  --band: #f1f1f1;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 20px; }
 
 body {
+  min-width: 320px;
   margin: 0;
+  padding: 32px 16px;
+  color: var(--ink);
+  background: var(--page);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.cv-sheet {
+  display: grid;
+  grid-template-columns: minmax(260px, 34%) minmax(0, 66%);
+  width: min(100%, 920px);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--paper);
+  box-shadow: 0 12px 36px rgb(0 0 0 / 12%);
+}
+
+header {
+  grid-column: 1;
+  padding: 0 34px 36px;
+  color: #fff;
+  background: var(--sidebar);
+  border-bottom: 1px solid #424242;
+}
+
+.profile-photo {
+  display: block;
+  width: calc(100% + 68px);
+  height: 280px;
+  margin: 0 -34px 36px;
+  object-fit: cover;
+  object-position: 50% 27%;
+  filter: grayscale(1) contrast(1.05);
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2.15rem, 4vw, 2.7rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+header > p {
+  max-width: 240px;
+  margin: 28px 0 32px;
+  color: #eee;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.8;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+nav { padding-top: 24px; border-top: 1px solid #4b4b4b; }
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li { margin: 0; }
+nav a {
+  display: block;
+  color: #bdbdbd;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav a:hover, nav a:focus-visible { color: #fff; }
+
+main { display: contents; }
+
+section {
+  min-width: 0;
+  padding: 34px 36px;
+  background: var(--paper);
+}
+
+#contacts, #skills, #english {
+  grid-column: 1;
+  padding: 32px 34px;
+  color: #eee;
+  background: var(--sidebar);
+  border-bottom: 1px solid #424242;
+}
+
+#about, #code, #projects, #education, #strengths, #goals { grid-column: 2; }
+#projects, #strengths, #goals { background: var(--band); }
+
+#contacts { grid-row: 2; }
+#about { grid-row: 1; }
+#skills { grid-row: 3 / span 3; }
+#projects { grid-row: 2; }
+#education { grid-row: 3; }
+#code { grid-row: 4; }
+#strengths { grid-row: 5; }
+#english { grid-row: 6; }
+#goals { grid-row: 6; }
+
+h2, h3, h4 { color: inherit; line-height: 1.3; }
+h2 {
+  margin: 0 0 20px;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+h3 { margin: 24px 0 10px; font-size: 0.88rem; letter-spacing: 0.08em; text-transform: uppercase; }
+h4 { margin: 20px 0 8px; font-size: 0.86rem; }
+p { margin: 0 0 10px; }
+p:last-child { margin-bottom: 0; }
+ul, ol { margin: 0; padding-left: 20px; }
+li + li { margin-top: 4px; }
+
+a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+address { color: #eee; font-style: normal; }
+#contacts ul, #skills > ul { padding-left: 18px; }
+#contacts ul { padding: 0; list-style: none; }
+#contacts li { margin: 0; padding: 4px 0; border-bottom: 1px solid rgb(255 255 255 / 10%); }
+#contacts li:last-child { border-bottom: 0; }
+#contacts li::marker, #skills li::marker { color: #fff; }
+#skills h3:first-of-type { margin-top: 0; }
+#about p, #education p { color: var(--muted); }
+#english p { color: #eee; }
+
+#projects article,
+#strengths > :not(h2),
+#goals > :not(h2) {
+  margin-left: 8px;
+  padding-left: 24px;
+  border-left: 2px solid #2a2a2a;
+}
+
+article h3:first-child { margin-top: 0; color: var(--ink); font-size: 1rem; }
+article > ul:first-of-type {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 24px;
+  padding-left: 18px;
+}
+article > ul:first-of-type li { min-width: 0; margin: 0; }
+
+#education {
+  position: relative;
+}
+
+#education::after {
+  position: absolute;
+  top: 74px;
+  bottom: 34px;
+  left: 44px;
+  width: 2px;
+  background: #2a2a2a;
+  content: "";
+}
+
+#education > :not(h2) {
+  margin-left: 8px;
+  padding-left: 24px;
+}
+
+pre {
+  max-width: 100%;
+  margin: 14px 0 0;
+  padding: 18px 20px;
+  overflow-x: auto;
+  color: #f2f2f2;
+  background: #202020;
+  border-left: 3px solid #8b8b8b;
+  tab-size: 2;
+}
+code { font-family: "Cascadia Code", Consolas, monospace; font-size: 0.78rem; line-height: 1.55; }
+
+footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 34px;
+  color: #eee;
+  background: #999;
+}
+footer p { margin: 0; }
+.rs-school-logo { display: block; width: 58px; height: auto; filter: grayscale(1); }
+
+@media (max-width: 720px) {
+  body { padding: 0; background: var(--paper); }
+  .cv-sheet { display: block; width: 100%; box-shadow: none; }
+  main { display: flex; flex-direction: column; }
+  header, section, #contacts, #skills, #english { padding: 28px 24px; }
+  header { padding-top: 40px; }
+  .profile-photo {
+    width: calc(100% + 48px);
+    height: min(88vw, 440px);
+    margin: -40px -24px 32px;
+    object-position: 50% 25%;
+  }
+  #about { order: 1; }
+  #contacts { order: 2; }
+  #skills { order: 3; }
+  #projects { order: 4; }
+  #education { order: 5; }
+  #code { order: 6; }
+  #english { order: 7; }
+  #strengths { order: 8; }
+  #goals { order: 9; }
+}
+
+@media (max-width: 420px) {
+  body { font-size: 13px; }
+  header h1 { font-size: 2.35rem; }
+  nav ul { grid-template-columns: 1fr; }
+  footer { align-items: flex-start; padding: 18px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+@media print {
+  body { padding: 0; background: #fff; font-size: 11px; }
+  .cv-sheet { width: 100%; box-shadow: none; }
 }
